@@ -1,0 +1,578 @@
+main {
+	display: flex;
+	flex-direction: column;
+	padding: 70px 30px 30px 60px;
+	gap: 70px;
+}
+
+.best-seller-list::-webkit-scrollbar,
+.recommendation-list::-webkit-scrollbar {
+	width: 4px;
+}
+
+.best-seller-list::-webkit-scrollbar-track,
+.recommendation-list::-webkit-scrollbar-track {
+	background: transparent;
+	border-radius: 100vw;
+}
+
+.best-seller-list::-webkit-scrollbar-thumb,
+.recommendation-list::-webkit-scrollbar-thumb {
+	background: linear-gradient(
+		90deg,
+		rgba(252, 152, 70, 1) 0%,
+		rgba(255, 192, 0, 1) 37%,
+		rgba(255, 243, 0, 1) 98%
+	);
+	border: 6px solid white;
+	border-radius: 100vw;
+}
+
+.main-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.main-header-left {
+	display: flex;
+	flex-direction: column;
+	padding-top: 60px;
+	gap: 30px;
+}
+
+.main-header-left button {
+	align-self: flex-start;
+}
+
+.main-header-left h1 {
+	font-size: 45px;
+	max-width: 550px;
+}
+
+.main-header-left p {
+	font-size: 20px;
+}
+
+.main-header-left img {
+	width: 40%;
+	height: auto;
+}
+.main-header-logo {
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+	align-items: center;
+}
+
+.main-header-logo img {
+	width: 50px;
+}
+
+.main-header-logo h2 {
+	font-size: 45px;
+}
+
+.top-circle {
+	position: absolute;
+	top: -40%;
+	left: -10%;
+	z-index: -2;
+	background: rgb(252, 152, 70);
+	background: linear-gradient(
+		90deg,
+		rgba(252, 152, 70, 1) 0%,
+		rgba(255, 192, 0, 1) 37%,
+		rgba(255, 243, 0, 1) 98%
+	);
+	width: 750px;
+	height: 750px;
+}
+
+.inner-circle {
+	position: relative;
+	width: 40%;
+	height: 40%;
+	top: 30%;
+	left: 30%;
+	background-color: white;
+	z-index: -1;
+}
+
+.circle {
+	border-radius: 100000px;
+}
+
+.header-btn {
+	width: 150px;
+	font-size: 20px;
+}
+
+.main-header :nth-child(2) {
+	width: 50%;
+}
+
+.best-seller-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.section-title {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.section-title h1 {
+	font-size: 36px;
+}
+.line {
+	width: 225px;
+	height: 5px;
+	border-radius: 5px;
+	background-color: black;
+}
+
+.black-button {
+	padding: 10px 20px;
+	border: 3.5px solid black;
+	background-color: transparent;
+	font-size: 16px;
+	font-weight: bolder;
+	border-radius: 10px;
+	cursor: pointer;
+	color: black;
+	transition: color 0.25s ease-in;
+	margin-right: 30px;
+}
+
+.black-button:hover {
+	background-color: black;
+	color: white;
+}
+
+.best-seller-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 40px;
+	overflow-x: scroll;
+	width: 100%;
+	height: fit-content;
+	list-style: none;
+	margin-top: 20px;
+}
+
+.best-seller-song {
+	padding: 10px;
+	padding-top: 20px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 200px;
+	margin-bottom: 25px;
+	min-height: 305px;
+}
+
+.song-img-blur {
+	position: absolute;
+	top: 7%;
+	left: 5%;
+	width: 197px;
+	border-radius: 20%;
+	filter: blur(10px);
+	z-index: -1;
+}
+
+.best-seller-hover {
+	display: none;
+	width: 190px;
+	height: 190px;
+	position: absolute;
+	top: 6%;
+	left: 5%;
+	border-radius: 10px;
+	background-color: rgb(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.best-seller-list li:hover .best-seller-hover {
+	display: block;
+}
+
+.best-seller-playbtn {
+	position: absolute;
+	right: 7%;
+	bottom: 7%;
+	height: 60px;
+	width: 60px;
+	background-color: white;
+	border-radius: 50%;
+}
+
+.best-seller-playbtn img {
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	top: 25%;
+	left: 26%;
+}
+
+.song-img {
+	width: 190px;
+	border-radius: 10px;
+}
+
+.best-seller-song h2 {
+	margin-top: 10px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	max-width: 200px;
+}
+
+.best-seller-song h4 {
+	margin-top: 10px;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	font-weight: 600;
+}
+
+.recommendation-content {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: fit-content;
+	gap: 50px;
+}
+
+.recommendation-list {
+	display: flex;
+	flex-direction: column;
+	max-height: 250px;
+	overflow-x: scroll;
+	flex-wrap: wrap;
+	list-style: none;
+	gap: 25px 10px;
+	padding-bottom: 20px;
+}
+
+.recommendation-list li {
+	max-height: 250px;
+	width: 375px;
+	box-sizing: border-box;
+}
+
+.recommendation-song {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	gap: 15px;
+	padding: 8px 10px;
+}
+
+.recommendation-list li:hover,
+.recommendation-surprise-placeholder:hover {
+	background-color: rgba(163, 163, 163, 0.6);
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.noitem {
+	visibility: hidden;
+}
+
+.recommendation-song:hover h5 {
+	display: none;
+}
+.recommendation-song:hover .recommendation-playbtn {
+	display: block;
+}
+.recommendation-song h5 {
+	font-size: 24px;
+}
+
+.recommendation-song img {
+	width: 85px;
+	border-radius: 8px;
+}
+
+img.recommendation-playbtn {
+	width: 22px;
+	display: none;
+}
+
+.recommendation-song-title {
+	max-width: 230px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	flex: 1;
+	justify-content: space-between;
+}
+
+.recommendation-song-title h3 {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.recommendation-song-title h4 {
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.recommendation-surprise {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	flex: content;
+}
+
+.recommendation-surprise h2 {
+	text-align: center;
+}
+
+.recommendation-surprise-placeholder {
+	display: flex;
+	position: relative;
+	width: 550px;
+	height: fit-content;
+	padding: 20px 10px;
+	align-items: center;
+	gap: 15px;
+	box-sizing: border-box;
+}
+
+.recommendation-surprise-placeholder img {
+	height: auto;
+	width: 30%;
+	margin-left: 30px;
+	border-radius: 5px;
+}
+
+.surprise-song-title {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-right: 30px;
+}
+.surprise-song-title h3 + h4 {
+	width: auto;
+}
+
+.recommendation-surprise button {
+	margin-right: 0px;
+}
+
+@media only screen and (max-width: 900px) {
+	.main-header-left h1 {
+		font-size: 30px;
+	}
+	.main-header-logo h2 {
+		font-size: 24px;
+	}
+	.main-header-left p {
+		font-size: 16px;
+	}
+	.main-header-logo img {
+		width: 32px;
+	}
+
+	.main-header :nth-child(2) {
+		width: 60%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.main-header {
+		flex-direction: column-reverse;
+		align-items: center;
+		height: fit-content;
+		padding: 20px;
+	}
+
+	.main-header-left {
+		align-items: center;
+		text-align: center;
+		padding: 0;
+		width: 70%;
+		height: fit-content;
+	}
+
+	.main-header-left button {
+		align-self: center;
+	}
+	.h-logo {
+		width: fit-content;
+		text-align: start;
+	}
+	.main-header-logo {
+		display: flex;
+		flex-direction: row;
+		width: fit-content;
+		justify-content: center;
+	}
+	.top-circle {
+		height: 100%;
+		width: 100%;
+		top: -80%;
+		left: 0%;
+	}
+	.best-seller-list::-webkit-scrollbar-thumb,
+	.recommendation-list::-webkit-scrollbar-thumb {
+		border: 3px solid black;
+	}
+	.header-btn {
+		width: fit-content;
+	}
+
+	.section-title h1 {
+		font-size: 24px;
+	}
+
+	.line {
+		height: 3px;
+		width: 150px;
+	}
+
+	.best-seller-list {
+		gap: 20px;
+	}
+	.best-seller-song {
+		min-height: 215px;
+	}
+	.best-seller-song img {
+		width: 130px;
+	}
+
+	.best-seller-song h2 {
+		font-size: 18px;
+		max-width: 130px;
+	}
+
+	.best-seller-song h4 {
+		font-size: 14px;
+		max-width: 130px;
+	}
+
+	.black-button {
+		margin-right: 0px;
+	}
+	.best-seller-playbtn {
+		position: absolute;
+		right: 7%;
+		bottom: 7%;
+		height: 45px;
+		width: 45px;
+		background-color: white;
+		border-radius: 50%;
+	}
+
+	.best-seller-playbtn img {
+		width: 50%;
+		height: 50%;
+		position: absolute;
+		top: 25%;
+		left: 26%;
+	}
+	.best-seller-hover {
+		display: none;
+		width: 130px;
+		height: 130px;
+		position: absolute;
+		top: 8%;
+		left: 6%;
+		border-radius: 10px;
+		background-color: rgb(0, 0, 0, 0.2);
+		z-index: 1;
+		transition: display 1s ease-in;
+	}
+
+	.recommendation-song {
+		gap: 10px;
+	}
+
+	.recommendation-song h5 {
+		min-width: 13px;
+		margin-right: 5px;
+	}
+
+	.recommendation-song-title {
+		max-width: none;
+	}
+
+	.recommendation-song-title h3 {
+		font-size: 16px;
+	}
+	.recommendation-song-title h4 {
+		font-size: 12px;
+	}
+	.recommendation-content {
+		flex-direction: column;
+		width: 100%;
+		height: fit-content;
+	}
+
+	.recommendation-surprise-placeholder {
+		width: 80%;
+	}
+
+	.recommendation-surprise-placeholder {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: start;
+		min-height: 350px;
+		gap: 30px;
+	}
+
+	.recommendation-surprise-placeholder img {
+		margin: 0px;
+		width: 190px;
+	}
+
+	.surprise-song-title {
+		margin: 0px;
+	}
+
+	.recommendation-surprise :nth-child(2) {
+		order: 3;
+	}
+	.recommendation-surprise :nth-child(3) {
+		order: 2;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	main {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.black-button {
+		padding: 8px 13px;
+		border: 2px solid black;
+		font-size: 12px;
+		border-radius: 5px;
+	}
+
+	.best-seller-list {
+		gap: 8px;
+	}
+}

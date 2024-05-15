@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Willify - Register</title>
+		<link rel="stylesheet" href="../styles/headerFooter.css" />
+		<link rel="stylesheet" href="../styles/register.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" href="../asset/logo.png" />
+	</head>
+
+	<script defer src="../js/navbar.js"></script>
+	<script defer src="../js/register.js"></script>
+
+	<body>
+		<header>
+			<nav class="navbar">
+				<div class="nav-left">
+					<img src="../asset/logo.png" alt="" class="logo" />
+					<h2 class="h-logo">Willify</h2>
+				</div>
+
+				<div class="nav-right">
+					<div class="nav-right-links">
+						<a href="./index.html">Home</a>
+						<a href="./songs.html">Songs</a>
+						<a href="./about_us.html">About Us</a>
+						<button class="btn-register" type="button">Register</button>
+					</div>
+
+					<img src="../asset/menu.svg" alt="" id="btn-menu" />
+				</div>
+			</nav>
+		</header>
+
+		<div class="bg-circle"></div>
+		<main>
+			<img class="register-picture" src="../asset/Picture2.png" alt="" />
+			<form class="register">
+				<div class="register-title">
+					<h2>Register</h2>
+					<div class="line"></div>
+				</div>
+				<div class="register-textfield name">
+					<label for="form-name">Name</label>
+					<input type="text" placeholder="Enter Name" id="form-name" />
+					<div class="error"></div>
+				</div>
+				<div class="register-textfield email">
+					<label for="form-email">Email</label>
+					<input
+						type="email"
+						placeholder="Enter Email"
+						id="form-email"
+						autocomplete="email"
+					/>
+					<div class="error"></div>
+				</div>
+				<div class="register-textfield">
+					<label for="form-password">Password</label>
+					<div class="password">
+						<input
+							type="password"
+							placeholder="Enter Password"
+							id="form-password"
+							autocomplete="current-password"
+						/>
+						<img
+							id="password-eye"
+							src="../asset/eye-slash-regular.svg"
+							alt=""
+						/>
+					</div>
+					<div class="error"></div>
+				</div>
+				<div class="register-age">
+					<label for="slider-age">Age</label>
+					<div>
+						<input type="range" min="1" max="100" id="slider-age" />
+						<h3 id="age-value">0</h3>
+					</div>
+				</div>
+				<h4 for="radio-gender">Gender</h4>
+				<div class="register-gender">
+					<div>
+						<input type="radio" name="Gender" id="radio-male" value="male" />
+						<label for="radio-male"><p id="label-male">Male</p></label>
+					</div>
+					<div>
+						<input
+							type="radio"
+							name="Gender"
+							id="radio-female"
+							value="female"
+						/>
+						<label for="radio-female"><p id="label-female">Female</p></label>
+					</div>
+				</div>
+				<div class="register-agree">
+					<label class="label-agree"
+						>I agree to the <u>Terms and Conditions</u>
+						<input type="checkbox" id="checkbox-agree" />
+						<span class="agree-checkmark"></span>
+					</label>
+				</div>
+				<button type="submit" class="btn-submit">Register</button>
+			</form>
+		</main>
+
+		<footer>
+			<div class="footer-content">
+				<div class="footer-left">
+					<div class="footer-contact">
+						<h2 class="footer-title">Contact Info</h2>
+						<div class="footer-contact-content">
+							<img src="../asset/mail.svg" alt="" />
+							<p>William092@binus.ac.id</p>
+						</div>
+						<div class="footer-contact-content">
+							<img src="../asset/map-pin.svg" alt="" />
+							<p>Universitas Bina Nusantara, Jakarta Barat, Indonesia</p>
+						</div>
+					</div>
+					<div class="footer-links">
+						<h2 class="footer-title">Links</h2>
+						<div class="footer-links-content">
+							<a href="./index.html">Home</a>
+							<a href="./songs.html">Songs</a>
+							<a href="./about_us.html">About us</a>
+							<button type="button" class="btn-register">Register</button>
+						</div>
+					</div>
+				</div>
+				<div class="footer-right">
+					<div class="footer-about">
+						<h2 class="footer-title">About Us</h2>
+						<p>
+							Discover and immerse yourself in our curated selection of top-tier
+							tracks: Explore, Stream, and Enjoy the Best Songs on our Platform!
+						</p>
+					</div>
+					<div class="footer-logos">
+						<div class="footer-logo">
+							<img src="../asset/logo.png" alt="" class="logo" />
+							<h2 class="h-logo">Willify</h2>
+						</div>
+
+						<p>Music all around you!</p>
+					</div>
+				</div>
+			</div>
+			<div class="separator"></div>
+			<div class="footnote">
+				<p>&copy;2024 Willify. All right reserved</p>
+				<p>2602054120 - MAT - William</p>
+				<div class="footer-icon">
+					<img src="../asset/LinkedIn.png" alt="" /><img
+						src="../asset/Instagram.png"
+						alt=""
+					/>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
